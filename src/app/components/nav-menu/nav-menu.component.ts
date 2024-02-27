@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Store} from "@ngrx/store";
 import {Observable} from "rxjs";
-import {City, Coordinates} from "../../models/city.model";
+import {City} from "../../models/city.model";
 import {selectAllCities} from "../../store/city.selectors";
 import {AsyncPipe, JsonPipe, NgIf} from "@angular/common";
 import {Router, RouterLink} from "@angular/router";
@@ -35,23 +35,6 @@ export class NavMenuComponent {
     this.toggleCitiesMenu();
     this.store.dispatch(selectCity({city}))
     this.router.navigate(['cities', 'city']);
-  }
-
-  coordinates: Coordinates | undefined;
-  positionError: string | undefined;
-
-  findMe() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.coordinates = position.coords;
-        this.positionError = undefined;
-      }, (error) => {
-        this.positionError = error.message;
-        this.coordinates = undefined;
-      });
-    } else {
-      this.positionError = "Geolocation is not supported by this browser.";
-    }
   }
 
 }
