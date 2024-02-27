@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+//@import "bootstrap/dist/css/bootstrap-grid.min.css";
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url('assets/grit.svg'), url('assets/grit-light.svg');
+  background-color: rgb(17 24 39 / 1);
+}
+
+app-root {
+  height: 100%;
+  color: white;
+  display: grid;
+  grid-template-rows: auto min-content;
+}

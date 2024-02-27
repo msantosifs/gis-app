@@ -1,0 +1,14 @@
+<nav>
+  <h1>GIS App</h1>
+  <ul>
+    <li class="collapsible" (click)="toggleCitiesMenu()"><span class="menu-option">Cities</span>
+      <ul *ngIf="isCitiesMenuVisible" class="cities-menu content">
+        @for(city of (cities$ | async); track city.id){
+          <li><span (click)="openCityMap(city)">{{city.name}}</span></li>
+        }
+      </ul>
+    </li>
+    <li><span class="menu-option" [routerLink]="'/locate'">Locate Me</span></li>
+    <li><span class="menu-option" [routerLink]="'/about'">About</span></li>
+  </ul>
+</nav>

@@ -1,0 +1,28 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "name": "New York",
+      "coordinates": {
+        "latitude": 40.7128,
+        "longitude": -74.0060
+      }
+    },
+    {
+      "id": 2,
+      "name": "San Francisco",
+      "coordinates": {
+        "latitude": 37.7749,
+        "longitude": -122.4194
+      }
+    },
+    {
+      "id": 3,
+      "name": "London",
+      "coordinates": {
+        "latitude": 51.5074,
+        "longitude": -0.1278
+      }
+    }
+  ]
+}

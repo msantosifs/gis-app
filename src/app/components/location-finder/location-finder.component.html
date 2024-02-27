@@ -1,0 +1,13 @@
+@if (!coordinates){
+  <div class="button-wrapper">
+    <button (click)="findMe()">Find Me</button>
+  </div>
+} @else {
+  <div class="view-map-location">
+    <p *ngIf="positionError">{{positionError}}</p>
+    <p *ngIf="coordinates">Latitude: {{coordinates.latitude}}, Longitude: {{coordinates.longitude}}</p>
+    <app-map-container [coordinates]="coordinates"></app-map-container>
+  </div>
+}
+
+

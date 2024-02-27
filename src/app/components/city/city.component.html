@@ -1,0 +1,11 @@
+<div class="city-container">
+  <h2>Selected City Map</h2>
+  <ul>
+    @if(city$ | async; as city){
+    <li class="city">
+      {{ city.name }} - Latitude: {{city.coordinates.latitude}}, Longitude: {{city.coordinates.longitude}}
+      <app-map-container [coordinates]="city.coordinates"></app-map-container>
+    </li>
+    }
+  </ul>
+</div>
