@@ -1,6 +1,7 @@
 import {Routes} from '@angular/router';
 import {CityComponent} from "./components/city/city.component";
 import {FindLocationComponent} from "./components/location-finder/location-finder.component";
+import {HomeComponent} from "./components/home/home.component";
 
 export const routes: Routes = [
   {
@@ -14,16 +15,15 @@ export const routes: Routes = [
   },
   {
     path: 'locate',
-    component: FindLocationComponent // replace LocateComponent with actual component name
+    component: FindLocationComponent
   },
-  /*
   {
-    path: 'about',
-    component: AboutComponent // replace AboutComponent with actual component name
-  },*/
+    path: 'home',
+    component: HomeComponent
+  },
+  // wildcard route
   {
-    path: '',
-    redirectTo: '/cities',
-    pathMatch: 'full'
+    path: '**',
+    redirectTo: 'home'
   },
 ];
